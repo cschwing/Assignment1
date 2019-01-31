@@ -22,13 +22,11 @@ public:
 	CrazyRandomSword() : Weapon("Crazy random sword", 50.0) { //Calls Weapon(name, hitpoints) constructor with values Crazy random sword and 50 hitpoints
 	}
 
-	int generateRandomInt(int l, int h); // Generate a random integer from l to h
-
 	virtual ~CrazyRandomSword() {};
 
 	virtual double hit(double armor);
 
 };
 
-#endif /* CrazyRandomSword_H */
+#endif /* CRAZYRANOMSWORD_H */
 

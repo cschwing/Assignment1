@@ -58,6 +58,12 @@ public:
      * @return Damage equals to the hitpoints of the weapon
      */
     double hit();
+
+	/**
+	 * Returns a random integer in the range from l to h
+	 * @return An integer
+	 */
+	int generateRandomInt(int l, int h);
 };
 
 

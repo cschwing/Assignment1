@@ -21,8 +21,6 @@ public:
 	BowAndArrow() : Weapon("Bow and arrow", 65.0) { //Calls Weapon(name, hitpoints) constructor with values Bow and arrow and 65
 	}
 
-	int generateRandomInt(int l, int h); // Generate a random integer from l to h
-
 	virtual ~BowAndArrow() {};
 
 	virtual double hit(double armor);
