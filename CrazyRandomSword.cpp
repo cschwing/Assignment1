@@ -35,7 +35,7 @@ int CrazyRandomSword::generateRandomInt(int l, int h)
 	*/
 	std::random_device rd; // obtain a random number from hardware
 	std::mt19937 eng(rd()); // seed the generator
-	std::uniform_int_distribution<> distr(7, 100); // define the range
+	std::uniform_int_distribution<> distr(l, h); // define the range
 
 	return distr(eng); // return a random int
 
