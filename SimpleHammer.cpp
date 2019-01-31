@@ -8,6 +8,7 @@
 #include "SimpleHammer.h"
 
 double SimpleHammer::hit(double armor) {
+	double damage;
 
 	/*	If  armor is less than 30, the hammer will ignore all armor points	*/
 	if (armor < 30) 
