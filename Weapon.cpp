@@ -5,6 +5,7 @@
  */ 
 
 #include "Weapon.h"
+#include <random>
 
 std::string Weapon::getName() {
     return name;
