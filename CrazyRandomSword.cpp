@@ -9,17 +9,11 @@
 #include <random>
 #include <cmath>
 
-/* Constructor to determine hitpoints*/
-CrazyRandomSword::CrazyRandomSword()
-{
-
-}
-
 double CrazyRandomSword::hit(double armor) {
 
 	int ignoredArmor = (2, floor(armor / 3));				// Ignore armor in a range from 2 to 1/3 of the weapons armor
 	hitPoints = Weapon::generateRandomInt(7, 100);			// hitPoints is a random integer between 7 and 100
-	double damage = hitPoints - ignoredArmor();
+	double damage = hitPoints - (armor - ignoredArmor);
 
 	if (damage < 0) {
 		return 0;

@@ -9,14 +9,9 @@
 #include <random>
 #include <cmath>
 
- /* Constructor to determine hitpoints*/
-BowAndArrow::BowAndArrow()
-{
-
-}
-
 double BowAndArrow::hit(double armor) {
 
+	double damage;
 	/* Bow and arrow has a 50% chance of ignoring 80% of armor. Otherwise, it ignores 10%*/
 	if (Weapon::generateRandomInt(0, 1) == 1)
 		damage = hitPoints - (armor*.2);
