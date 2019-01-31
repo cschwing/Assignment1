@@ -12,7 +12,7 @@
 double CrazyRandomSword::hit(double armor) {
 
 	int ignoredArmor = (2, floor(armor / 3));				// Ignore armor in a range from 2 to 1/3 of the weapons armor
-	double damage = hitPoints - (armor - ignoredArmor);
+	double damage = floor(hitPoints - (armor - ignoredArmor));
 
 	if (damage < 0) {
 		return 0;
