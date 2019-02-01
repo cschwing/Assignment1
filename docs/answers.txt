@@ -27,9 +27,14 @@ f) To achieve this, use the command git log --follow -- Weapon.h
 g) To achieve this, use the command git log --grep=file
 
 h) Inheritance allows the creation of objects that have all of the properties of a parent object,
-	along with some others only available to the child class. 
-   Polymorphism is a way of treating generic objects as different types. One interface can be used
-	to define multiple different objects, all behaving in the same way.
+	along with some others only available to the child class. Objects can be organized into a hierarchy
+	based on their type. Objects that fall under the same category can be give the same parent to 
+	normalize their behavior.
+   Polymorphism is a way of handling different generic objects and different types. One interface can be used
+	to define multiple different objects, all behaving in the same way. The idea is to be able
+	to define behavior for different forms of an object with one interface. This is very closely
+	related to inheritance (For example class number can support subclasses double, float, and int
+	and give them all expected behavior like add, subtract, etc).
    Encapsulation is the idea of bundling different functions and variables to create a sort of
 	blue print for an object. This is basically a class. Data can be hidden from the user, and if
 	the user needs to access it, functions (methods in Java) can be added that allow this access
@@ -44,3 +49,18 @@ j) The centralized workflow would not be good for a project with 100 developers.
 	absolute chaos, since they all contribute directly to the blessed repository. In the dictator model,
 	everything is organized into a hierarchy, and developers can all work on their own individual
 	parts without having to worry about other developer's pushing to the repository. 
+
+9) The RoleGame prototype uses both encapsulation and polymorphism. The prototype uses encapsulatoin in its 
+	Weapon class system. The actual inner workings of how a weapon is created and stored are all hidden
+	from the user. All they have to do in main is call one method from WeaponFactory, and the weapon object is
+	created with the data from the constructor and it is ready to be used. In a real situation, we might
+	add a menu to main in which the user selects what kind of weapon they want. We don't ask them
+	to create a WeaponFactory object with a weapon, manually store all the data, and define the weapon's
+	behavior. All of that is encapsulated in the WeaponFactory and Weapon classes.
+  The RoleGame prototype also uses polymorphism. In this game, we have several different weapons like simple hammer,
+   crazy random sword, and common spear. While all of these weapons are different, they will all behave in similar 
+   ways. Each one needs some type of hit() function to calculate damage, but they all handle it differently.
+   So, we create a generic Weapon class that sets up these basic functions (the constructor and the hit() function).
+   We can then create child classes for each individual weapon that all inherit from the Weapon class.
+   This way, we only need to define one weapon interface, but we can define different behaviors for each weapon
+   separately. 
