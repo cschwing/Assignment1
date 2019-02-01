@@ -24,9 +24,6 @@ void simulateWeapon(Weapon * weapon, double armor) {
     cout << weapon->getName() << " inflicts " << weapon->hit(armor) << " when armor is " << armor << std::endl << std::endl;
 }
 
-/*
- * 
- */
 int main(int argc, char** argv) {
 
     double armor = 29;
