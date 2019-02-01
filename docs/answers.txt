@@ -50,7 +50,7 @@ j) The centralized workflow would not be good for a project with 100 developers.
 	everything is organized into a hierarchy, and developers can all work on their own individual
 	parts without having to worry about other developer's pushing to the repository. 
 
-9) The RoleGame prototype uses both encapsulation and polymorphism. The prototype uses encapsulatoin in its 
+  The RoleGame prototype uses both encapsulation and polymorphism. The prototype uses encapsulatoin in its 
 	Weapon class system. The actual inner workings of how a weapon is created and stored are all hidden
 	from the user. All they have to do in main is call one method from WeaponFactory, and the weapon object is
 	created with the data from the constructor and it is ready to be used. In a real situation, we might
